@@ -16,55 +16,58 @@
     <link rel="stylesheet" href="./styles/dashboard.css">
 
 
+
     <title>DrinkTemp Dashboard</title>
 
   </head>
 
   <body>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h1>Welcome to DrinkTemp!</h1>
-          <p class="lead">Please, enter your name and date of birth in the fields below to continue. </p>
+<div class="outer-box">
+  <div class="container main-box">
+    <div class="row head">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="title">Welcome to DrinkTemp!</h1>
+      </div>
+    </div>
+    <div class="row head">
+      <div class="col-md-8 col-md-offset-2">
+        <h3 class="lead">Please, enter your first name and date of birth in the fields below to continue. </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2" style="height:70px;">
+        <div class="form-group">
+            <input type="email" class="form-control" id="first-name" placeholder="First Name">
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2" style="height:70px;">
-          <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="First Name">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2" style="height:70px;">
-          <div class="form-group">
-            <div class='input-group date' id='datetimepicker10'>
-              <input type='text' class="form-control" placeholder="Date of Birth"/>
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar">
-                </span>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2" style="height:70px;">
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker10'>
+            <input type='text' class="form-control date-birth" placeholder="Date of Birth"/>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar">
               </span>
-            </div>
+            </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-4">
-          <button type="button" class="btn btn-primary btn-lg btn-block">I Drink Beer!</button>
-        </div>
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default btn-lg btn-block">I Sip Wine!</button>
-        </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+        <p>
+        <a class="btn btn-primary btn-lg btn-block beerBtn" href="#" role="button">I Drink Beer!</a>
+        </p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-4">
+        <p>
+        <a class="btn btn-primary btn-lg btn-block wineBtn" href="#" role="button">I Sip Wine!</a>
+        </p>
       </div>
     </div>
+  </div>
+</div>
 
 
 
