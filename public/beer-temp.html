@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-md-12" style="height:70px;">
           <div class="form-inline">
-              <label for="searches" class="search-text">Search Any Location:</label>
+              <label for="searches" id="search-text">Search Any Location:</label>
               <input type="email" class="form-control" id="first-name" placeholder="First Name">
           </div>
         </div>
@@ -79,8 +79,14 @@
 
 
     <!-- Map -->
-    <div>
+    <div class="">
       <div class="col-xs-12 col-sm-12 col-md-12">
+        <div id="floating-panel">
+          <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+          <button onclick="changeGradient()">Change gradient</button>
+          <button onclick="changeRadius()">Change radius</button>
+          <button onclick="changeOpacity()">Change opacity</button>
+        </div>
         <div id="map"></div>
       </div>
     </div>
@@ -137,46 +143,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <script src="./scripts/app.js"></script>
 
-  <script>
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 13
-    });
-    var infoWindow = new google.maps.InfoWindow({map: map});
 
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Location found.');
-        map.setCenter(pos);
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  }
-
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-                          'Error: The Geolocation service failed.' :
-                          'Error: Your browser doesn\'t support geolocation.');
-  }
-  </script>
+  <script src="./scripts/map.js"></script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&callback=initMap"></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&callback=initMap&libraries=visualization"></script>
+
 
 
 

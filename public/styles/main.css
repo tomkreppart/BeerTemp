@@ -16,15 +16,18 @@
 
 }
 
+/******** MAP **********/
 
 #map {
   height: 400px;
 }
 
-/*#floating-panel {
+
+
+#floating-panel {
   position: absolute;
   top: 10px;
-  right: 5%;
+  left: 25%;
   z-index: 5;
   background-color: #fff;
   padding: 5px;
@@ -33,15 +36,18 @@
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
-}*/
-
-.search-text .filter-text {
-  font-size: 30px;
 }
 
-.first-name {
-  display: inline-block;
+#floating-panel {
+  background-color: #fff;
+  border: 1px solid #999;
+  left: 25%;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  z-index: 5;
 }
+
 
 @media (max-width: 767) {
   #map {
