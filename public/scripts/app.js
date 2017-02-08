@@ -20,7 +20,7 @@ $(".beerBtn").on("click", function(event) {
   var rightNow = moment();
 
   if(rightNow.diff(birthdate, 'years') > 21) {
-    window.location = ".public/beer-temp.html"
+    window.location.replace("./beer-temp.html");
   } else {
     alert("Go Away!");
   }
@@ -39,7 +39,7 @@ $(".wineBtn").on("click", function(event) {
   var rightNow = moment();
 
   if(rightNow.diff(birthdate, 'years') > 21) {
-    window.location = ".public/wine-temp.html"
+    window.location.replace("./wine-temp.html");
   } else {
     alert("Go Away!");
   }

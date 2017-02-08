@@ -1,0 +1,53 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+}
+
+html {
+  max-width: 960px;
+}
+
+
+/*.outer-box {
+  max-width: 960px;
+  border-style: groove;
+  border: 2px solid black;
+}*/
+
+.main-box {
+  background-color: #d1c5c5;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding: 20px;
+  border-style: groove;
+  border: 2px solid black;
+}
+
+.form-group {
+  border: 0.5px;
+  border-color: #616161;
+}
+
+.head {
+text-align: center;
+}
+
+@media (min-width:767px) {
+  .outer-box {
+    padding: 100px;
+  }
+}
+@media (max-width: @screen-xs-max) {
+  .btn {
+    margin-bottom: 20px;
+  }
+  .button-gap {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .space {
+    height: 20px;
+  }
+}

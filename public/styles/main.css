@@ -1,0 +1,68 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
+
+
+#map {
+  height: 400px;
+}
+
+/*#floating-panel {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}*/
+
+.search-text .filter-text {
+  font-size: 30px;
+}
+
+.first-name {
+  display: inline-block;
+}
+
+@media (max-width: 767) {
+  #map {
+    height: 500px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  #map {
+    height: 500px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1199px) {
+  #map {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #map {
+    height: 600px;
+  }
+}

@@ -342,7 +342,7 @@ body{
     display: -webkit-flex;
     flex-direction: column;
     -webkit-flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
 
 .content{

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/HeadAndFoot.css">
+    <link rel="stylesheet" href="./styles/beer-temp.css">
+
+
+    <title>DrinkTemp Main</title>
+
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-inverse navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand" href="beer-temp.html">DrinkTemp</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation"><a href="beer-temp.html">BeerTemp</a></li>
+                        <li role="presentation"><a href="wine-temp.html">WineTemp</a></li>
+                    </ul>
+                    <p class="navbar-text navbar-right actions"><a class="btn btn-default action-button" role="button" href="#">Name</a></p>
+                </div>
+            </div>
+        </nav>
+    </header><!-- Header End -->
+
+    <!-- Search & Filters -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="height:70px;">
+          <div class="form-inline">
+              <label for="searches" class="search-text">Search Any Location:</label>
+              <input type="email" class="form-control" id="first-name" placeholder="First Name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="btn-group col-xs-12  col-sm-3 col-md-3">
+          <label for="filters" class="filter-text">Filter By:</label>
+        </div>
+        <div class="btn-group col-xs-6  col-sm-3 col-md-3">
+          <button type="button" class="btn btn-primary btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="btn-group col-xs-6  col-sm-3 col-md-3">
+          <button type="button" class="btn btn-primary btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+          <p>
+          <a class="btn btn-primary btn-lg btn-block beerBtn" href="#" role="button">Search</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Map -->
+    <div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div id="map"></div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="logo"><a href="#"> LOGO </a></h2>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="https://developers.google.com/maps/">Google Maps</a></li>
+                        <li><a href="http://www.brewerydb.com/">BreweryDB</a></li>
+                        <li><a href="http://api.snooth.com/">Snooth</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>My Top Wines</h5>
+                    <ul>
+                        <li><a href="https://www.hallwines.com/">Hall Wines</a></li>
+                        <li><a href="http://www.adastrawines.com/">Adastra Wines</a></li>
+                        <li><a href="http://www.franzia.com/">Franzia Box Wine</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>My Top Beers</h5>
+                    <ul>
+                        <li><a href="http://www.stellaartois.com/">Stella Artois</a></li>
+                        <li><a href="http://www.busch.com/">Busch Light</a></li>
+                        <li><a href="https://lagunitas.com/">Lagunitas</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="https://github.com/tomkreppart/WineHeater" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/tomkreppart/WineHeater" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://github.com/tomkreppart/WineHeater" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-default">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2017 Copyright DrinkTemp </p>
+        </div>
+    </footer><!-- Footer End -->
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="./scripts/app.js"></script>
+
+  <script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 13
+    });
+    var infoWindow = new google.maps.InfoWindow({map: map});
+
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        map.setCenter(pos);
+      }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+      });
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  }
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'Error: The Geolocation service failed.' :
+                          'Error: Your browser doesn\'t support geolocation.');
+  }
+  </script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&callback=initMap"></script>
+
+
+
+  </body>
+
+</html>
