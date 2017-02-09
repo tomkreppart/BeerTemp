@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="./styles/beer-temp.css">
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&libraries=visualization"></script>
+
+    <script src="./scripts/map.js" defer></script>
+
     <title>DrinkTemp Main</title>
 
   </head>
@@ -39,39 +47,49 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="height:70px;">
-          <div class="form-inline">
-              <label for="searches" id="search-text">Search Any Location:</label>
-              <input type="email" class="form-control" id="first-name" placeholder="First Name">
+          <div class="form-group">
+              <label for="searches" class="search-text"></label>
+              <input type="email" class="form-control" id="search" placeholder="Search Any City">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="btn-group col-xs-12  col-sm-3 col-md-3">
-          <label for="filters" class="filter-text">Filter By:</label>
+        <div class="col-xs-12  col-sm-3 col-md-3 col-sm-offset-1 col-md-offset-1">
+          <select class="form-control">
+            <option>-Year Founded-</option>
+            <option>2016-2017</option>
+            <option>2010-2015</option>
+            <option>2000-2009</option>
+            <option>1990-1999</option>
+            <option>Before 1990</option>
+          </select>
         </div>
-        <div class="btn-group col-xs-6  col-sm-3 col-md-3">
-          <button type="button" class="btn btn-primary btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Action <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-          </ul>
+        <div class="col-xs-12  col-sm-3 col-md-3">
+          <select class="form-control">
+            <option>-Location Type-</option>
+            <option>micro</option>
+            <option>macro</option>
+            <option>nano</option>
+            <option>prewpub</option>
+            <option>production</option>
+            <option>office</option>
+            <option>tasting</option>
+            <option>restaurant</option>
+            <option>ocidery</option>
+            <option>meadery</option>
+          </select>
         </div>
-        <div class="btn-group col-xs-6  col-sm-3 col-md-3">
-          <button type="button" class="btn btn-primary btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Action <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-          </ul>
+        <div class="btn-group col-xs-12  col-sm-2 col-md-2">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              Open Now
+            </label>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-3 col-md-3">
+        <div class="col-xs-12 col-sm-2 col-md-2">
           <p>
-          <a class="btn btn-primary btn-lg btn-block beerBtn" href="#" role="button">Search</a>
+          <a class="btn btn-primary btn-md btn-block beerBtn" href="#" role="button">Search</a>
           </p>
         </div>
       </div>
@@ -80,12 +98,18 @@
 
     <!-- Map -->
     <div class="">
-      <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
         <div id="floating-panel">
           <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+        </div>
+        <div id="floating-panel2">
           <button onclick="changeGradient()">Change gradient</button>
-          <button onclick="changeRadius()">Change radius</button>
+        </div>
+        <div id="floating-panel3">
           <button onclick="changeOpacity()">Change opacity</button>
+        </div>
+        <div id="floating-panel4">
+          <button onclick="changeRadius()">Change radius</button>
         </div>
         <div id="map"></div>
       </div>
@@ -138,17 +162,6 @@
         </div>
     </footer><!-- Footer End -->
 
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-
-  <script src="./scripts/map.js"></script>
-
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&callback=initMap&libraries=visualization"></script>
 
 
 

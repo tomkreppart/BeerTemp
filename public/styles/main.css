@@ -16,10 +16,17 @@
 
 }
 
+.checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+
 /******** MAP **********/
 
 #map {
   height: 400px;
+  margin-bottom: 20px;
 }
 
 
@@ -27,7 +34,7 @@
 #floating-panel {
   position: absolute;
   top: 10px;
-  left: 25%;
+  right: 25px;
   z-index: 5;
   background-color: #fff;
   padding: 5px;
@@ -35,17 +42,49 @@
   text-align: center;
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
-  padding-left: 10px;
+  
 }
 
-#floating-panel {
-  background-color: #fff;
-  border: 1px solid #999;
-  left: 25%;
-  padding: 5px;
+#floating-panel2 {
   position: absolute;
-  top: 10px;
+  top: 60px;
+  right: 25px;
   z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  
+}
+
+#floating-panel3 {
+  position: absolute;
+  top: 110px;
+  right: 25px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  
+}
+
+#floating-panel4 {
+  position: absolute;
+  top: 160px;
+  right: 25px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  
 }
 
 
