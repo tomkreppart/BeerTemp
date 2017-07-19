@@ -22,6 +22,7 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
 }
 
 ////////// Geolocation with Brewery Heatmap\\\\\\\\\\\
@@ -34,7 +35,7 @@ function gps(infoWindow){
     };
     console.log("gps");
 
-    var url = "http://galvanize-cors-proxy.herokuapp.com/https://api.brewerydb.com/v2/search/geo/point?lat="+pos.lat.toString()+"&lng="+pos.lng.toString()+"&key=c7522aeef54280ac173d168a0e08d9bb"
+    var url = "https://galvanize-cors-proxy.herokuapp.com/https://api.brewerydb.com/v2/search/geo/point?lat="+pos.lat.toString()+"&lng="+pos.lng.toString()+"&key=c7522aeef54280ac173d168a0e08d9bb"
     console.log(url);
 
     $.ajax({
@@ -52,20 +53,16 @@ function gps(infoWindow){
         var heatmapPoints = getPoints(brewLatLng);
         heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatmapPoints,
-          map: map
+          map: map,
+          radius: 50
 
         });
-        // console.log(heatmap);
-        // toggleHeatmap(heatmap);
-        // changeGradient();
-        // changeRadius();
-        // changeOpacity();
+        initialize();
 
       }).fail(function(err){
         console.log("fail");
         console.log(err);
       });
-
     infoWindow.setPosition(pos);
     infoWindow.setContent('Location found.');
     map.setCenter(pos);
@@ -163,3 +160,47 @@ function getPoints(brewLatLng) {
 
 
 ////////Search\\\\\\\\\
+
+function initialize() {
+
+ var options = {
+  types: ['(cities)'],
+  componentRestrictions: {country: "us"}
+ };
+
+ var input = document.getElementById('searchTextField');
+ var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// var geocoder = new google.maps.Geocoder();
+//
+// function searchBar () {
+//
+// document.getElementById('searchBtn').addEventListener('click', function(){
+//   geocodeAddress(geocoder, map);
+// });
+//     $("#address").keyup(function(event){
+//       if(event.keyCode == 13){
+//         $("#searchBtn").click();
+//       }
+//     });
+//
+// function geocodeAddress(geocoder, resultsMap) {
+//        var address = document.getElementById('address').value;
+//        geocoder.geocode({'address': address}, function(results, status) {
+//          if (status === 'OK') {
+//            resultsMap.setCenter(results[0].geometry.location);
+//            var marker = new google.maps.Marker({
+//              map: resultsMap,
+//              position: results[0].geometry.location,
+//              zoom: 13
+//            });
+//          } else {
+//            alert('Geocode was not successful for the following reason: ' + status);
+//            console.log(status);
+//          }
+//        })
+//    }
+//  }

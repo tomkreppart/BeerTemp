@@ -1,3 +1,58 @@
+/***********************
+  RAISED BUTTONS
+************************/
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+}
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+
+h1 {
+	font-family: 'Corben', Georgia, Times, serif;
+	font-size: 40px;
+	line-height: 55px;
+}
+
+p {
+	font-family: 'Nobile', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 25px;
+}
+
+
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -16,9 +71,10 @@ html {
 }*/
 
 .main-box {
-  background-color: #d1c5c5;
+  background-color: #342b44;
   margin-right: auto;
   margin-left: auto;
+  margin-top: auto;
   max-width: 960px;
   padding: 20px;
   border-style: groove;
@@ -32,6 +88,14 @@ html {
 
 .head {
 text-align: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+h3 {
+  color: #fff;
 }
 
 @media (min-width:767px) {

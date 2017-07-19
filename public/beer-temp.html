@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <link href='http://fonts.googleapis.com/css?family=Corben:bold' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/main.css">
@@ -11,15 +14,13 @@
     <link rel="stylesheet" href="./styles/beer-temp.css">
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" ></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&libraries=visualization,places"></script>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvx646itBqQ8Y59QKKO76Aay5Jy1lzokQ&libraries=visualization"></script>
 
-    <script src="./scripts/map.js" defer></script>
-
-    <title>DrinkTemp Main</title>
+    <title>BeerTemp Main</title>
 
   </head>
 
@@ -29,15 +30,14 @@
     <header>
         <nav class="navbar navbar-inverse navigation-clean-button">
             <div class="container">
-                <div class="navbar-header"><a class="navbar-brand" href="beer-temp.html">DrinkTemp</a>
+                <div class="navbar-header">
+                  <!-- <img src="./images/logosmall.jpg" class="img-rounded img-responsive"/> -->
+                  <a class="navbar-brand" href="beer-temp.html">BeerTemp</a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
+
                 <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li role="presentation"><a href="beer-temp.html">BeerTemp</a></li>
-                        <li role="presentation"><a href="wine-temp.html">WineTemp</a></li>
-                    </ul>
-                    <p class="navbar-text navbar-right actions"><a class="btn btn-default action-button" role="button" href="#">Name</a></p>
+                    <p class="navbar-text navbar-right actions"><a class="btn btn-default action-button" role="button" href="beer-temp.html">Beer!</a></p>
                 </div>
             </div>
         </nav>
@@ -46,58 +46,22 @@
     <!-- Search & Filters -->
     <div class="container">
       <div class="row">
-        <div class="col-md-12" style="height:70px;">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1" style="height:70px;">
           <div class="form-group">
               <label for="searches" class="search-text"></label>
-              <input type="email" class="form-control" id="search" placeholder="Search Any City">
+              <input id="searchTextField" type="text" class="form-control" placeholder="Search Any City" autocomplete="on">
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12  col-sm-3 col-md-3 col-sm-offset-1 col-md-offset-1">
-          <select class="form-control">
-            <option>-Year Founded-</option>
-            <option>2016-2017</option>
-            <option>2010-2015</option>
-            <option>2000-2009</option>
-            <option>1990-1999</option>
-            <option>Before 1990</option>
-          </select>
-        </div>
-        <div class="col-xs-12  col-sm-3 col-md-3">
-          <select class="form-control">
-            <option>-Location Type-</option>
-            <option>micro</option>
-            <option>macro</option>
-            <option>nano</option>
-            <option>prewpub</option>
-            <option>production</option>
-            <option>office</option>
-            <option>tasting</option>
-            <option>restaurant</option>
-            <option>ocidery</option>
-            <option>meadery</option>
-          </select>
-        </div>
-        <div class="btn-group col-xs-12  col-sm-2 col-md-2">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">
-              Open Now
-            </label>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-2 col-md-2">
-          <p>
-          <a class="btn btn-primary btn-md btn-block beerBtn" href="#" role="button">Search</a>
-          </p>
-        </div>
-      </div>
+
     </div>
 
 
     <!-- Map -->
     <div class="">
+      <!-- <div>
+        <input id="searchTextField" type="text" size="50" placeholder="Enter a location" autocomplete="on">
+      </div> -->
       <div class="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
         <div id="floating-panel">
           <button class="js-toggle-heatmap">Toggle Heatmap</button>
@@ -121,9 +85,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h2 class="logo"><a href="#"> LOGO </a></h2>
+                    <img src="./images/logo.jpg" class="img-rounded img-responsive"/>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <h5>Resources</h5>
                     <ul>
                         <li><a href="https://developers.google.com/maps/">Google Maps</a></li>
@@ -131,15 +95,7 @@
                         <li><a href="http://api.snooth.com/">Snooth</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-2">
-                    <h5>My Top Wines</h5>
-                    <ul>
-                        <li><a href="https://www.hallwines.com/">Hall Wines</a></li>
-                        <li><a href="http://www.adastrawines.com/">Adastra Wines</a></li>
-                        <li><a href="http://www.franzia.com/">Franzia Box Wine</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <h5>My Top Beers</h5>
                     <ul>
                         <li><a href="http://www.stellaartois.com/">Stella Artois</a></li>
@@ -164,7 +120,7 @@
 
 
 
-
+  <script src="./scripts/map.js" ></script>
 
   </body>
 
